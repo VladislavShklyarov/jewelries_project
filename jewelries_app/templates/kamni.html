@@ -1,0 +1,58 @@
+  <head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Развлечения для фанатов аниме"/>
+    {% load static %}
+   <link rel = "stylesheet", href="{% static 'css/style.css' %}">
+
+	<title> {% block title %}{% endblock %}</title>
+</head>
+          {% block content %}
+    {% load static %}
+
+<header>
+       <div class="logo">
+           <a href="{% url 'main' %}"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+        </div>
+     </header>
+
+
+     <main>
+       <div class="about_container">
+          <img src="{% static 'img/камни.jpg' %}" alt="камни">
+        </div>
+         <div class="about_container">
+             <p><h1>Драгоценные Камни</h1></p>
+             {% include 'navigation.html' %}
+             <div align="justify">
+             <p><h4>Драгоценные камни — минералы, относимые к самым дорогим материалам.
+                    Согласно классификации английского минералога Дж. Ф. Г. Смита драгоценными считаются материалы,
+                    в наибольшей степени отвечающие трём основным критериям: «красоте, долговечности и редкости».
+                    Таких материалов, в старое время называемых «благородными», в равной степени отвечающих строгим
+                    требованиям, сравнительно немного. Из металлов к драгоценным относятся золото, платина, электрум
+                    (сплав золота и серебра) и серебро (хотя оно заметно окисляется на воздухе). Из минералов по
+                    прочности и красоте первое место занимает алмаз, в огранённом виде — бриллиант, далее следуют рубин,
+                    сапфир, изумруд. Менее редкие минералы называют полудрагоценными.</h4></p>
+         </div>
+       </div>
+
+       <div class="about_container">
+       <a href="https://ru.m.wikipedia.org/wiki/Драгоценные_камни"><img src="{% static 'img/wiki.png' %}" alt="wiki"></a>
+       </div>
+     </main>
+
+     <title>Список</title>
+</head>
+<body>
+
+
+     <footer>
+         <nav>
+            <a href="{% url 'main' %}">Вернуться на главную</a>
+         </nav>
+
+         <div class="logo">
+             <a href="{% url 'main' %}"><img src="{% static 'img/logo.png' %}" alt="" class="graficlogo"></a>
+         </div>
+       </footer>
+
+      {% endblock %}

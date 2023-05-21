@@ -1,0 +1,129 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Развлечения для фанатов аниме"/>
+    {% load static %}
+   <link rel = "stylesheet", href="{% static 'css/style.css' %}">
+
+	<title> {% block title %}{% endblock %}</title>
+</head>
+{% block content %}
+    {% load static %}
+         <header>
+        <div class="logo">
+            <a href="{% url 'main' %}"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+         </div>
+     </header>
+     <main>
+
+
+
+         <div class="about_container">
+             <p><h1>Астрология и Камни</h1></p>
+             {% include 'navigation.html' %}
+             <div align="justify">
+             <p><h4> <br>В древности все украшения, которые надевали, имели смысл и несли в себе определенную цель.
+                     Сейчас мы почти позабыли об этом и носим украшения лишь для красоты. А в стародавние времена
+                     люди верили в силу амулетов, оберегов и талисманов, способных защитить от сглаза, порчи, помочь
+                     в делах и лечить своих хозяев. Самым сильным из них считается талисман. В то время как оберег защищает
+                     только от сглаза, порчи и обмана, а амулет способен влиять на окружающих людей и их отношение.
+                     Энергия талисмана наделяет человека скрытыми способностями.
+
+                     <br>Каждому знаку Зодиака соответствует свой камень. Очень важно не переборщить и не носить одновременно
+                     камни противоположных знаков. У каждого знака есть свой талисман – камень наиболее подходящий
+                     по энергетике, он предполагает взаимодействие с другими камнями, взаимодействующими со знаком Зодиака,
+                     которые уступают по силе основному талисману. Итак, у каждого знака кроме талисмана есть еще
+                     Счастливые и Благоприятные камни. Благоприятные камни, как правило, не оказывают на человека никакого
+                     воздействия, но и не противоречат ему.</h4></p>
+         </div>
+       </div>
+
+       <div class="about_container">
+          <img src="{% static 'img/фстрология.jpg' %}" alt="фстрология">
+        </div>
+     </main>
+   <div class="about_container">
+    <p><h2>Знаки и Камни</h2></p>
+  </div>
+
+<table background="{% static 'img/nebo.jpg' %}" width="max">
+  <style>
+    table {
+      width: 60%;
+      border: 1px solid black;
+      margin: auto;
+    }
+    td {
+      text-align: center;
+      width: 20%;
+    }
+  </style>
+  <tr>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Овен - Рубин</h4></p>
+    </td>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Стрелец - Топаз</h4></p>
+    </td>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Лев - Яшма</h4></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Весы - Алмаз</h4></p>
+    </td>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Близнецы - Кварц</h4></p>
+    </td>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Водолеи - Лазурит</h4></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Девы - Малахит</h4></p>
+    </td>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Козероги - Аметист</h4></p>
+    </td>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Тельцы - Опал</h4></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Скорпионы - Хрусталь </h4></p>
+    </td>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Рыбы - Изумруд</h4></p>
+    </td>
+    <td>
+      <img src="{% static 'img/а1.png' %}" alt="а1">
+      <p><h4>Раки - Лунный камень</h4></p>
+    </td>
+  </tr>
+</table>
+
+     </main>
+
+     <footer>
+         <nav>
+             <a href="{% url 'main' %}">Вепнуться на главную</a>
+         </nav>
+
+         <div class="logo">
+             <a href="{% url 'main' %}"><img src="{% static 'img/logo.png' %}" alt="" class="graficlogo"></a>
+         </div>
+     </footer>
+{%endblock content %}

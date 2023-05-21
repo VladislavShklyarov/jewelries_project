@@ -1,0 +1,66 @@
+  <head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Развлечения для фанатов аниме"/>
+    {% load static %}
+   <link rel = "stylesheet", href="{% static 'css/style.css' %}">
+
+	<title> {% block title %}{% endblock %}</title>
+</head>
+           {% block content %}
+    {% load static %}
+
+
+     <header>
+       <div class="logo">
+           <a href="{% url 'main' %}"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+        </div>
+
+     </header>
+
+     <main>
+         <div class="about_container">
+         <p><h1>Алгоритмическая задача</h1></p>
+             {% include 'navigation.html' %}
+       </div>
+     </main>
+
+     <div class="about_container">
+
+     </div>
+
+     <main>
+     <form class="form" id="calculation-form">
+        <label for="diameter">Диаметр камня (мм):</label>
+        <input class="feedback_input" type="number" id="diameter" required>
+        <br>
+        <label for="width">Размеры квадратного выреза (мм):</label>
+        <input class="feedback_input" type="number" id="width" required>
+        <br>
+
+         <div id="result"></div>
+         <br>
+
+        <button class="button_submit" type="submit">Выполнить расчет</button>
+    </form>
+         <br><br><br>
+     </main>
+
+     <footer>
+         <nav>
+             <a href="main.html">Вернуться на главную</a>
+         </nav>
+
+         <div class="logo">
+             <a href="{% url 'main' %}"><img src="{% static 'img/logo.png' %}" alt="logo" class="graficlogo"></a>
+         </div>
+         <div class="social">
+             <a href="https://mail.ru/"><img src="{% static 'img/em.png' %}" alt="1"></a>
+             <a href="https://www.facebook.com/"><img src="{% static 'img/face.png' %}" alt="2"></a>
+             <a href="https://www.google.ru/"><img src="{% static 'img/goo.png' %}" alt="3"></a>
+             <a href="https://www.instagram.com/"><img src="{% static 'img/inst.png' %}" alt="4"></a>
+         </div>
+    </footer>
+               {% load static %}
+                <script src="{% static 'js/algorithm.js' %}"></script>
+
+{% endblock %}

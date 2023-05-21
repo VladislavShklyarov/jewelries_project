@@ -1,0 +1,93 @@
+        <head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Развлечения для фанатов аниме"/>
+    {% load static %}
+   <link rel = "stylesheet", href="{% static 'css/style.css' %}">
+
+	<title> {% block title %}{% endblock %}</title>
+</head>
+           {% block content %}
+    {% load static %}
+
+     <header>
+        <div class="logo">
+            <a href="{% url 'main' %}"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+         </div>
+     </header>
+
+
+     <body>
+       <main>
+
+         <div class="about_container">
+             <p><h1>Альбом Дизайна Фасадов</h1></p>
+             {% include 'navigation.html' %}
+             <div align="justify">
+             <p><h4><br>На этой странице можно увидеть работы, о которых рассказывается на главной странице.
+                        Этот проект является моим вступительным проектом, который я подавала на направление «Дизайн Среды».
+                        Дальнейшие мои проекты выполнены более качествеено с технической точки зрения,
+                        их вы можете посмотреть в моем портфолио:
+                    <br><a href="https://portfolio.hse.ru/Student/15573">Портфолио</a></br>
+                    <br>Архитектурной концепцией серии послужили образы драгоценных и полудрагоценных камней, поэтому в каждой работе
+                    разрабатывается ряд стилистических решений, связанных с определенным камнем. У зданий разное назначение, акцент
+                    ставится на визуальном восприятии построек. К работам прилагается название камня, его фотография и модульное
+                    изображение работы. Все сооружения выполнены из железо-бетонной конструкции с добавлениемстеклянных панелей в частях,
+                    где должен быть самоцвет.</h4></p>
+         </div>
+       </div>
+
+
+        <div class="about_container">
+          <style>
+          li{
+              text-decoration: none;
+              list-style: none;
+
+
+          }
+          </style>
+          <ul>
+           <li>
+           <p><a href="{% static 'img/project_1-2.jpg' %}" target="_blank"><img src="{% static 'img/project_1.jpg' %}" alt="Топаз"></a></p>
+           <figuration>Топаз</figuration>
+           </li>
+           <li>
+           <p><a href="{% static 'img/project_2-2.jpg' %}" target="_blank"><img src="{% static 'img/project_2.jpg' %}"></a></p>
+           <figuration>Кварц</figuration>
+           </li>
+           <li>
+           <p><a href="{% static 'img/project_3-2.jpg' %}" target="_blank"><img src="{% static 'img/project_3.jpg' %}"></a></p>
+           <figuration>Аметист</figuration>
+           </li>
+           <li>
+           <p><a href="{% static 'img/project_4-2.jpg' %}" target="_blank"><img src="{% static 'img/project_4.jpg' %}"></a></p>
+           <figuration>Рубин</figuration>
+           </li>
+           <p><a href="{% static 'img/project_5-2.jpg' %}" target="_blank"><img src="{% static 'img/project_5.jpg' %}"></a></p>
+           <figuration>Опал</figuration>
+           </li>
+           <li>
+           <p><a href="{% static 'img/project_6-2.jpg' %}" target="_blank"><img src="{% static 'img/project_6.jpg' %}"></a></p>
+           <figuration>Сапфир</figuration>
+           </li>
+           <li>
+           <p><a href="{% static 'img/project_7-2.jpg' %}" target="_blank"><img src="{% static 'img/project_7.jpg' %}"></a></p>
+           <figuration>Малахит</figuration>
+           </li>
+         </ul>
+        </div>
+
+
+     <footer>
+         <nav>
+             <a href="{% url 'main' %}">Вернуться на главную</a>
+         </nav>
+
+         <div class="logo">
+             <a href="{% url 'main' %}"><img src="{% static 'img/logo.png' %}" alt="" class="graficlogo"></a>
+         </div>
+        </footer>
+       </main>
+
+
+{% endblock %}

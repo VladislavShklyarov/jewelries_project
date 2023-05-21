@@ -1,0 +1,50 @@
+     <head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Развлечения для фанатов аниме"/>
+    {% load static %}
+   <link rel = "stylesheet", href="{% static 'css/style.css' %}">
+
+	<title> {% block title %}{% endblock %}</title>
+</head>
+           {% block content %}
+    {% load static %}
+
+
+     <header>
+       <div class="logo">
+           <a href="{% url 'main' %}"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+        </div>
+
+     </header>
+     {% include 'navigation.html' %}
+
+
+     <main>
+     {% for gemstone in gemstones %}
+    <div class="gemstone">
+        <h3>{{ gemstone.name }}</h3>
+        <img src="{{ gemstone.photo.url }}" alt="{{ gemstone.name }}">
+        <p>{{ gemstone.description }}</p>
+        <p>Price: ${{ gemstone.price }}</p>
+    </div>
+{% endfor %}
+
+     </main>
+
+     <footer>
+         <nav>
+             <a href="{% url 'main' %}">Вернуться на главную</a>
+         </nav>
+
+         <div class="logo">
+             <a href="{% url 'main' %}"><img src="{% static 'img/logo.png' %}" alt="logo" class="graficlogo"></a>
+         </div>
+         <div class="social">
+             <a href="https://mail.ru/"><img src="{% static 'img/em.png' %}" alt="1"></a>
+             <a href="https://www.facebook.com/"><img src="{% static 'img/face.png' %}" alt="2"></a>
+             <a href="https://www.google.ru/"><img src="{% static 'img/goo.png' %}" alt="3"></a>
+             <a href="https://www.instagram.com/"><img src="{% static 'img/inst.png' %}" alt="4"></a>
+         </div>
+    </footer>
+
+{% endblock %}

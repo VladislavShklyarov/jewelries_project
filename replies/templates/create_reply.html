@@ -1,0 +1,42 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Развлечения для фанатов аниме"/>
+    {% load static %}
+   <link rel = "stylesheet", href="{% static 'css/style.css' %}">
+
+	<title> {% block title %}{% endblock %}</title>
+</head>
+{% block content %}
+    {% load static %}
+     <header>
+       <div class="logo">
+           <a href="main.html"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+        </div>
+     </header>
+               {% include 'navigation.html' %}
+<div class="about_container">
+    <p>Оставьте отзыв и наша команда с вами свяжется!</p>
+</div>
+
+
+           <form method="post" class="form">
+            {% csrf_token %}
+            {{ form.name}}<br>
+            {{ form.email }}<br>
+            {{ form.text }}<br>
+            <span>{{ error }}</span>
+            <button class="button_submit" type="submit">Добавить отзыв</button>
+               <br><br><br>
+            </form>
+
+ <footer>
+     <nav>
+         <a href="{% url 'main' %}">Вепнуться на главную</a>
+     </nav>
+
+     <div class="logo">
+         <a href="main.html"><img class="graficlogo" src="{% static 'img/logo.png'%}" alt="logo"></a>
+      </div>
+ </footer>
+
+{% endblock %}

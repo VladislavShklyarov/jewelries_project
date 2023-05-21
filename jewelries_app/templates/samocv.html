@@ -1,0 +1,250 @@
+         <head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Развлечения для фанатов аниме"/>
+    {% load static %}
+   <link rel = "stylesheet", href="{% static 'css/style.css' %}">
+
+	<title> {% block title %}{% endblock %}</title>
+</head>
+           {% block content %}
+    {% load static %}
+
+
+     <header>
+        <div class="logo">
+            <a href="{% url 'main' %}"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+         </div>
+     </header>
+
+     <main>
+       <div class="about_container">
+          <img src="{% static 'img/самоцветы.jpg'%}" alt="самоцветы">
+        </div>
+         <div class="about_container">
+             <p><h1>Самоцветы</h1></p>
+             {% include 'navigation.html' %}
+             <div align="justify">
+             <p><h4>Самоцве́ты (от рус. Сам и Цветной) — драгоценные, полудрагоценные и поделочные камни
+                    (минералы и горные породы), находящие применение в качестве ювелирного и поделочного сырья.
+                    Как правило, прозрачные или полупрозрачные. Термин самоцветы носит исторически-бытовой
+                    характер, он не относится к научной терминологии и не является строгим. В разное время
+                     в повседневной речи и речи разных специалистов мог относиться и к просвечивающим или
+                     непрозрачным камням, либо использоваться    для разделения по категориям цветных-бесцветных,
+                     ограночных-декоративных, драгоценных-поделочных камней.Термин применялся на Урале с XVIII века,
+                     упоминался М. И. Пыляевым, но широко введён в практику благодаря работам А. Е. Ферсмана.
+                     По классификации Ферсмана, самоцветами являются прозрачные камни, независимо от отнесения
+                     их к категориям драгоценных или поделочных;
+                     непрозрачные же минералы и породы относятся к «цветным камням».</h4></p>
+         </div>
+       </div>
+
+       <div class="about_container">
+       <a href="https://ru.m.wikipedia.org/wiki/Самоцветы"><img src="{% static 'img/wiki.png'%}" alt="wiki"></a>
+       </div>
+     </main>
+
+
+ <body>
+   <div class="about_container">
+    <p><h2>Таблица Самоцветов</h2></p>
+  </div>
+
+   <table>
+     <style>
+   table {
+    width: 60%;
+    border: 1px solid white;
+    margin: auto;
+   }
+   td {
+    text-align: center;
+      width: 20%;
+   }
+
+  </style>
+     <tr>
+      <td>
+          <img src="{% static 'img/s1.png'%}" alt="s1">
+        <p><h4>Кварц</h4></p>
+      </td>
+      <td>
+          <img src="{% static 'img/s2.png'%}" alt="s2">
+        <p><h4>Горный хрусталь</h4></p>
+      </td>
+      <td>
+          <img src="{% static 'img/s3.png'%}" alt="s3">
+        <p><h4>Аметист</h4></p>
+      </td>
+     <td>
+         <img src="{% static 'img/s4.png'%}" alt="s4">
+       <p><h4>Празиолит</h4></p>
+     </td>
+     <td>
+         <img src="{% static 'img/s5.png'%}" alt="s5">
+       <p><h4>Цитрин</h4></p>
+     </td>
+     <td>
+         <img src="{% static 'img/s6.png'%}" alt="s6">
+       <p><h4>Аметрин</h4></p>
+     </td>
+   </tr>
+
+   <tr>
+    <td>
+        <img src="{% static 'img/s7.png'%}" alt="s7">
+      <p><h4>Раухтопаз</h4></p>
+    </td>
+    <td>
+        <img src="{% static 'img/s8.png'%}" alt="s8">
+      <p><h4>Морион</h4></p>
+    </td>
+    <td>
+        <img src="{% static 'img/s9.png'%}" alt="s9">
+      <p><h4>Волосатик</h4></p>
+    </td>
+   <td>
+       <img src="{% static 'img/s10.png'%}" alt="s10">
+     <p><h4>Халцедон</h4></p>
+   </td>
+   <td>
+       <img src="{% static 'img/s11.png'%}" alt="s11">
+     <p><h4>Хризопраз</h4></p>
+   </td>
+   <td>
+       <img src="{% static 'img/s12.png'%}" alt="s12">
+     <p><h4>Сердолик</h4></p>
+   </td>
+ </tr>
+
+ <tr>
+  <td>
+      <img src="{% static 'img/s13.png'%}" alt="s13">
+    <p><h4>Агат</h4></p>
+  </td>
+  <td>
+      <img src="{% static 'img/s14.png'%}" alt="w14">
+    <p><h4>Моховой агат</h4></p>
+  </td>
+  <td>
+      <img src="{% static 'img/s15.png'%}" alt="s15">
+    <p><h4>Оникс</h4></p>
+  </td>
+ <td>
+     <img src="{% static 'img/s16.png'%}" alt="s16">
+   <p><h4>Яшма</h4></p>
+ </td>
+ <td>
+     <img src="{% static 'img/s17.png'%}" alt="s17">
+   <p><h4>Авантюрин</h4></p>
+ </td>
+ <td>
+     <img src="{% static 'img/s18.png'%}" alt="s18">
+   <p><h4>Опал</h4></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+     <img src="{% static 'img/s19.png'%}" alt="s19">
+   <p><h4>Нефрит</h4></p>
+ </td>
+ <td>
+     <img src="{% static 'img/s20.png'%}" alt="s20">
+   <p><h4>Жадеит</h4></p>
+ </td>
+ <td>
+     <img src="{% static 'img/s21.png'%}" alt="s21">
+   <p><h4>Родонит</h4></p>
+ </td>
+<td>
+    <img src="{% static 'img/s22.png'%}" alt="s22">
+  <p><h4>Лазурит</h4></p>
+</td>
+<td>
+    <img src="{% static 'img/s23.png'%}" alt="s23">
+  <p><h4>Малахит</h4></p>
+</td>
+<td>
+    <img src="{% static 'img/s24.png'%}" alt="s24">
+  <p><h4>Бирюза</h4></p>
+</td>
+</tr>
+
+<tr>
+ <td>
+     <img src="{% static 'img/s25.png'%}" alt="s25">
+   <p><h4>Чароит</h4></p>
+ </td>
+ <td>
+     <img src="{% static 'img/s26.png'%}" alt="s26">
+   <p><h4>Змеевик</h4></p>
+ </td>
+ <td>
+     <img src="{% static 'img/s27.png'%}" alt="s27">
+   <p><h4>Симбирцит</h4></p>
+ </td>
+</tr>
+</table>
+
+<div class="about_container">
+    <p><h2>Камни органического происхождения</h2></p>
+    <div align="justify">
+    <p><h4>
+<hr>
+<ul type="circle">
+  <li>Янтарь</li>
+  <li>Жемчуг</li>
+  <li>Перламутр</li>
+  <li>Гагат</li>
+  <li>Коралл</li>
+  <li>Аммолит</li>
+</ul>
+<hr>
+</h4></p>
+</div>
+
+</div>
+ <div class="about_container">
+     <p><h1>Свойства Самоцветов</h1></p>
+     <div align="justify">
+     <p><h4>Самоцветам издавна приписывались фантастические магические и целебные свойства,
+            как правило проявляемые при ношении камней на себе. В настоящее какие бы то ни
+            было научные подтверждения любых таких качеств отсутствуют. При ознакомлении с такого
+            рода сведениями следует иметь в виду, что они носят шарлатанский характер и не
+            имеют никакого отношения ни к минералогии, ни к медицине.</h4></p>
+       </div>
+     </div>
+
+<div class="about_container">
+ <div align="justify">
+    <p><h4>
+<hr>
+<ol>
+  <li>Красивым цветом или рисунком</li>
+  <li>Высокой твёрдостью</li>
+  <li>Прозрачностью</li>
+  <li>Блеском</li>
+  <li>Большим светорассеянием</li>
+  <li>Способностью принимать огранку, шлифовку и полировку</li>
+</ol>
+<hr>
+</h4></p>
+</div>
+</div>
+
+
+
+
+
+
+ <footer>
+     <nav>
+         <a href="{% url 'main' %}">Вепнуться на главную</a>
+     </nav>
+
+     <div class="logo">
+         <a href="main.html"><img class="graficlogo" src="{% static 'img/logo.png'%}" alt="logo"></a>
+      </div>
+ </footer>
+
+            {% endblock %}
