@@ -12,7 +12,7 @@
        <div class="logo">
            <a href="main.html"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="logo"></a>
         </div>
-     </header>
+     </header>d
                {% include 'navigation.html' %}
 <div class="about_container">
     <p>Оставьте отзыв и наша команда с вами свяжется!</p>
@@ -21,7 +21,7 @@
 
            <form method="post" class="form">
             {% csrf_token %}
-            {{ form.name}}<br>
+            {{ form.n}}<br>
             {{ form.email }}<br>
             {{ form.text }}<br>
             <span>{{ error }}</span>
