@@ -5,7 +5,8 @@
 				<a  {% if 'main' in request.path %} class="link_activated" {% else %} class="nav__link"{% endif %} href="{% url 'main' %}">Мероприятия</a>
 				<a  {% if 'progect' in request.path %} class="link_activated" {% else %} class="nav__link"{% endif %} href="{% url 'progect' %}">Отзывы</a>
 				<a  {% if 'samocv' in request.path %} class="link_activated" {% else %} class="nav__link"{% endif %} href="{% url 'samocv' %}">Контакты</a>
-				<a  {% if 'algorithm' in request.path %} class="link_activated" {% else %} class="nav__link"{% endif %} href="{% url 'algorithm' %}">Список аниме</a>
+				<a  {% if 'algorithm' in request.path %} class="link_activated" {% else %} class="nav__link"{% endif %} href="{% url 'algorithm' %}">Алгоритм</a>
+                <a  {% if 'shop' in request.path %} class="link_activated" {% else %} class="nav__link"{% endif %} href="{% url 'shop' %}">Магазин</a>
                 <button class="button" onclick="location.href='{% url 'create_reply' %}'">Остались вопросы?</button>
 </div>
 </nav>

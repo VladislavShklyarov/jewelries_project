@@ -21,9 +21,10 @@
 
            <form method="post" class="form">
             {% csrf_token %}
-            {{ form.n}}<br>
+            {{ form.name}}<br>
             {{ form.email }}<br>
             {{ form.text }}<br>
+
             <span>{{ error }}</span>
             <button class="button_submit" type="submit">Добавить отзыв</button>
                <br><br><br>
