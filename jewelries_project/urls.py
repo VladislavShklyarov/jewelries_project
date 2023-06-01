@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("jewelries_app.urls")),
     path('shop/', include('shop_app.urls')),
-    path('replies/', include('replies.urls'))
+    path('replies/', include('replies.urls')),
+    path('algorithm/', include('algorithm.urls'))
 ]
 
 from django.conf import settings

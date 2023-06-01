@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "jewelries_app",
     "shop_app",
-    'replies'
+    'replies',
+    'algorithm'
 ]
 
 MIDDLEWARE = [
